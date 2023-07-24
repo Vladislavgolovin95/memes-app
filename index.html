@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memes App</title>
+  <link rel="shortcut icon" href="/resources/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1> Конструктор мемов ✏️</h1>
+  <div class="memes-editor">
+    <div class="setting">
+      <h2>Настройки:</h2>
+      <ul class="setting-list">
+        <li class="setting-list__item">
+          <p class="setting-list__title">Мем</p>
+          <select id="select" class="setting-list__select">
+            <option disabled>Выберите мем</option>
+          </select>
+        </li>
+        <li class="setting-list__item">
+          <p class="setting-list__title">Текст сверху</p>
+          <input 
+            id="top-text" 
+            class="top-text" 
+            type="text"
+            placeholder="Введи текст"
+            >
+        </li>
+        <li class="setting-list__item">
+          <p class="setting-list__title">Текст снизу</p>
+          <input 
+            id="bottom-text" 
+            class="bottom-text" 
+            type="text"
+            placeholder="Введи текст"
+            >
+        </li>
+      </ul>
+    </div>
+    <div class="preview">
+      <h2>Превью:</h2>
+      <div id="preview">
+        <img id="previewImg" class="img">
+        <p id="top-output" class="top-output"></p>
+        <p id="bottom-output" class="bottom-output"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/index.js"></script>
+</body>
+</html>
