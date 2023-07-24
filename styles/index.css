@@ -42,10 +42,9 @@ h2 {
   font-size: 25px;
   outline: none;
   appearance: none;
-  background: url(../resources/select.svg) 96%/15% no-repeat;
+  background: url('../resources/select.svg') 96%/15% no-repeat;
   background-size: 7%;
 }
-
 .preview {
   position: relative;
   width: 570px;
