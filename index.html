@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1> Конструктор мемов ✏️</h1>
   <div class="memes-editor">
     <div class="setting">
       <h2>Настройки:</h2>
@@ -18,7 +17,7 @@
         <li class="setting-list__item">
           <p class="setting-list__title">Мем</p>
           <select id="select" class="setting-list__select">
-            <option disabled>Выберите мем</option>
+            <option value="">Выберите мем</option>
           </select>
         </li>
         <li class="setting-list__item">
@@ -39,12 +38,15 @@
             placeholder="Введи текст"
             >
         </li>
+        <li>
+          <p id="error"></p>
+        </li>
       </ul>
     </div>
     <div class="preview">
       <h2>Превью:</h2>
       <div id="preview">
-        <img id="previewImg" class="img">
+        <img id="previewImg" class="img" src="" alt="">
         <p id="top-output" class="top-output"></p>
         <p id="bottom-output" class="bottom-output"></p>
       </div>

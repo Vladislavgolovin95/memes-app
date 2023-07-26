@@ -3,34 +3,34 @@ export class Model {
     this.textMem = {};
     this.memes = [];
 
-    this.onTextChanged = onTextChanged;
     this.onMemesChanged = onMemesChanged;
     this.onMemImgChange = onMemImgChange;
+    this.onTextChanged = onTextChanged;
   }
 
   addTextMem = (topText, bottomText) => {
-    this.textMem = {
-      topText,
-      bottomText
-    }
+      this.textMem = {
+        topText,
+        bottomText
+      }
     this.onTextChanged(this.textMem)
+  }
+
+  getMem = (memName) => {
+    const memesArr = this.memes;
+    let memUrl;
+    memesArr.data.memes.forEach(mem => {
+      if (mem.name === memName) {
+        console.log(mem.url)
+        memUrl = mem.url;
+      }
+      return memUrl;
+    });
+    this.onMemImgChange(memUrl);
   }
 
   setMemes = (memes) => {
     this.memes = memes;
     this.onMemesChanged(this.memes);
-    console.log(memes);
-  }
-
-  getMem = (memName) => {
-    let memUrl;
-    this.memes.data.memes.forEach(mem => {
-      if (mem.name === memName) {
-        memUrl = mem.url;
-      }
-      console.log(memUrl);
-      return memUrl;
-    });
-    this.onMemImgChange(memUrl);
   }
 } 

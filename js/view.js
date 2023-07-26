@@ -6,6 +6,7 @@ export class View {
     this.bottomOutputNode = document.getElementById('bottom-output');
     this.selectNode = document.getElementById('select');
     this.previewImgNode = document.getElementById('previewImg');
+    this.errorMessageNode = document.getElementById('error');
 
     this.onNewText = onNewText;
     this.onNewMem = onNewMem;

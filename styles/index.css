@@ -6,12 +6,6 @@ body {
   background-color: #e6e7e8;
 }
 
-h1 {
-  margin-top: 20px;
-  font-size: 50px;
-  font-weight: 700;
-  text-align: center;
-}
 h2 {
   margin-bottom: 45px;
   font-size: 40px;
@@ -47,8 +41,8 @@ h2 {
 }
 .preview {
   position: relative;
-  width: 570px;
-  height: 335px;
+  max-width: 570px;
+  height: 100%;
 }
 
 .top-text,
@@ -61,37 +55,40 @@ h2 {
   border: 1px solid #000;
   font-size: 25px;
   background-color: transparent;
+
 }
 
 .img{
   display: block;
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .top-output {
   position: absolute;
-  top: 200px;
-  left: 150px;
+  width: 90%;
+  top: 100px;
+  left: 20px;
+  text-align: center;
   font-size: 25px;
   color: #fff;
   -webkit-text-stroke: 0.5px #000;
+  word-wrap: break-word;
 }
 .bottom-output {
   position: absolute;
-  top: 550px;
-  left: 150px;
+  width: 90%;
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
   font-size: 25px;
   color: #fff;
   -webkit-text-stroke: 0.5px #000;
+  word-wrap: break-word;
 }
 
 @media (max-width: 767px) {
-  h1 {
-    margin-bottom: 20px;
-    font-size: 40px;
-  }
   h2 {
     font-size: 30px;
     text-align: center;
@@ -127,12 +124,12 @@ h2 {
   }
   .top-output {
     top: 100px;
-    left: 150px;
+    left: 20px;
     font-size: 20px;
   }
   .bottom-output {
-    top: 450px;
-    left: 150px;
+    bottom: 20px;
+    left: 20px;
     font-size: 20px;
   }
 }
