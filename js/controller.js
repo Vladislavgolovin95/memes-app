@@ -43,8 +43,8 @@ export class Controller {
     this.view.renderMemImg(memUrl);
   }
 
-  handleViewNewMem = (memes, memName) => {
+  handleViewNewMem = (memName) => {
     console.log('handleViewNewMem')
-    this.model.getMem(memes, memName);
+    this.model.getMem(memName);
   }
 }

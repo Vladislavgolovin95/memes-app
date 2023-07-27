@@ -31,14 +31,14 @@ export class View {
   renderMemes = (memes) => {
     memes.data.memes.forEach(mem => {
       this.selectNode.innerHTML += `
-        <option value='${mem.name}'>${mem.name}</option>
+        <option value="${mem.name}">${mem.name}</option>
       `;
-      this.previewImgNode.setAttribute('src', mem.url);
+      this.previewImgNode.setAttribute("src", mem.url);
     });
   }
 
   renderMemImg = (memUrl) => {
-    this.previewImgNode.setAttribute('src', `${memUrl}`);
+    this.previewImgNode.setAttribute("src", `${memUrl}`);
   }
 
   _handleSelectClick = () => {

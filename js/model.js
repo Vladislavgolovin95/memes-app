@@ -17,9 +17,10 @@ export class Model {
   }
 
   getMem = (memName) => {
-    const memesArr = this.memes;
+    const memesArr = this.memes.data.memes;
     let memUrl;
-    memesArr.data.memes.forEach(mem => {
+    console.log(this.memes)
+    memesArr.forEach(mem => {
       if (mem.name === memName) {
         console.log(mem.url)
         memUrl = mem.url;
