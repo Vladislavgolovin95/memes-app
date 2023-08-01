@@ -25,20 +25,24 @@ export class View {
 
   renderText = (textMem) => {
     this.topOutputNode.innerHTML = textMem.topText;
-    this.bottomOutputNode.innerHTML = textMem.bottomText; 
+    this.bottomOutputNode.innerHTML = textMem.bottomText;
+    console.log('renderText');
   }
 
   renderMemes = (memes) => {
-    memes.data.memes.forEach(mem => {
+    memes.forEach(mem => {
       this.selectNode.innerHTML += `
         <option value="${mem.name}">${mem.name}</option>
       `;
+
       this.previewImgNode.setAttribute("src", mem.url);
     });
+    console.log('renderMemes');
   }
 
   renderMemImg = (memUrl) => {
     this.previewImgNode.setAttribute("src", `${memUrl}`);
+    console.log('renderMemImg');
   }
 
   _handleSelectClick = () => {

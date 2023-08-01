@@ -18,33 +18,30 @@ export class Controller {
 
   init () {
     this.api.fetchMemes()
-      .then(memes => {
+      .then(data => {
+        const memes = data.data.memes;
+
         this.model.setMemes(memes);
       });
   }
 
   handleViewNewText = (topText, bottomText) => {
-    console.log('handleViewNewText')
     this.model.addTextMem(topText, bottomText);
   }
 
   handleModelTextChanged = (textMem) => {
-    console.log('handleModelTextChanged')
     this.view.renderText(textMem);
   }
 
   handleModelMemesChanged = (memes) => {
-    console.log('handleModelTextChanged')
     this.view.renderMemes(memes);
   }
 
   handleModelMemImgChanged = (memUrl) => {
-    console.log('handleModelMemImgChanged')
     this.view.renderMemImg(memUrl);
   }
 
   handleViewNewMem = (memName) => {
-    console.log('handleViewNewMem')
     this.model.getMem(memName);
   }
 }

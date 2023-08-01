@@ -14,13 +14,21 @@ export class Model {
         bottomText
       }
     this.onTextChanged(this.textMem)
+    console.log('addTextMem');
+  }
+
+  setMemes = (memes) => {
+    this.memes = memes;
+    console.log(this.memes)
+    
+    this.onMemesChanged(this.memes);
+    console.log('setMemes');
   }
 
   getMem = (memName) => {
-    const memesArr = this.memes.data.memes;
     let memUrl;
     console.log(this.memes)
-    memesArr.forEach(mem => {
+    this.memes.forEach(mem => {
       if (mem.name === memName) {
         console.log(mem.url)
         memUrl = mem.url;
@@ -28,10 +36,6 @@ export class Model {
       return memUrl;
     });
     this.onMemImgChange(memUrl);
-  }
-
-  setMemes = (memes) => {
-    this.memes = memes;
-    this.onMemesChanged(this.memes);
+    console.log('getMem');
   }
 } 
