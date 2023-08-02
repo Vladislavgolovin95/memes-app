@@ -5,11 +5,11 @@ export class API{
 
   async fetchMemes() {
    try {
-    const promise = await fetch(`${this.baseUrl}/get_memes`);
-    if (!promise.ok) {
+    const getMemesResponse = await fetch(`${this.baseUrl}/get_memes`);
+    if (!getMemesResponse.ok) {
       throw new Error('Error')
     }
-    const response = await promise.json();
+    const response = await getMemesResponse.json();
     if (response.success === true) {
       return response;
     } else {

@@ -18,8 +18,8 @@ export class Controller {
 
   init () {
     this.api.fetchMemes()
-      .then(data => {
-        const memes = data.data.memes;
+      .then(response => {
+        const memes = response.data.memes;
 
         this.model.setMemes(memes);
       });
